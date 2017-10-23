@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+    Author: Brandon Lammey
+    Date Last Updated: 24 September 2017
+    File Name: Exercise4.html
+    Description: CSS editor takes in user input to manipulate the border and background for a block of text.
+-->
+<!DOCTYPE html>
+<html>
+        <head>
+            <!--includes: javascript file and CSS file-->
+            <script type="text/javascript" src="main.js"></script>
+            <link rel="stylesheet" href="myStyle.css">
+
+            <title>CSS Manipulation</title>
+        </head>
+    
+        <body>
+
+            <h1>CSS Manipulation</h1>
+
+            <table id="Manipulation">
+            <tr><td>
+    
+                <!--Dummy text to alter-->
+                <div id="editText">
+                        She smelled like hand sanitizer, pure and reminiscent of a hospital.  
+                        Her lips were like marble, cold and smooth.  
+                        Her eyes were like a stop light, you wanted them to be green but they were red and occasionally yellow.
+                </div>
+            </td></tr>
+
+            <tr><td>
+                <!--Asking the user for valid values for the background and border colors and the border width-->
+                <div id="values">
+                    <!--border details-->
+
+                    <h2> BORDER</h2>
+                        <label>Border Width (px):</label> <input type="text" id="borderWidth"><br/><br/>
+                        <label> Red value (0-255):</label> <input type="text" id="borderRed"><br/><br/>
+                        <label> Green value (0-255):</label> <input type="text" id="borderGreen"><br/><br/>
+                        <label> Blue value (0-255):</label> <input type="text" id="borderBlue"><br/><br/>
+                        <br/><br/>
+    
+                    <!--background details-->
+                        
+                    <h2> BACKGROUND</h2>
+                        <label> Red value (0-255):</label> <input type="text" id="backgroundRed"><br/><br/>
+                        <label> Green value (0-255):</label> <input type="text" id="backgroundGreen"><br/><br/>
+                        <label> Blue value (0-255):</label> <input type="text" id="backgroundBlue"><br/><br/>
+                        <br/><br/>
+
+                        <!--calling on JS file to manipulate text-->
+                        <button onclick="manipulateText()">SUBMIT</button>
+                </div>
+            </td></tr>
+
+            <tr><td>
+                <br/><br/>
+                <!--Return to Exercises-->
+                <a href="index.html">Home</a>
+                <br/><br/>
+            </td></tr>
+
+            </table>
+        </body>
+    
+    </html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+    Author: Brandon Lammey
+    Date Last Updated: 28 September 2017
+    File Name: customerFrontEnd.html
+    Description: Creates an online store of 3 items with 3 shipping options. Call on BackEnd.php to print receipt
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+      <!--includes: javascript file and CSS file-->
+      <link rel="stylesheet" href="myStyle.css">
+      <script type="text/javascript" src="main.js"></script>
+
+      <title> 
+            Web Store
+      </title>
+
+    </head>
+    <body>
+
+        <h1>Online Store</h1>
+
+        <form name="store" action="customerBackEnd.php" onsubmit="return validateForm()" method="post">
+
+        <!--Username and password input-->        
+        <label>Email: </label><input type="text" name="username"><br/>
+        <label>Password: </label><input type="password" name="password"><br/>        
+        </br></br>
+
+        <!--Items in Store and Selection-->
+        <table id="customerFrontEndTable">
+        <tr>
+          <th>
+                    
+            <label><h2>Black Panther Velvet Boots</h2></label>
+            <img src="http://i237.photobucket.com/albums/ff138/brandonlammey/448%20Project/Item1.jpg"style="height:200px; width:200px" align="center">
+            <label><h2>$250</h2></label>
+            </br>
+            <label>Quantity:<input type="number" name="quantity1"></label>
+
+          </th>
+
+          <th>
+                      
+            <label><h2>Murasaki Violet Silk Kimono</h2></label>
+            <img src="http://i237.photobucket.com/albums/ff138/brandonlammey/448%20Project/Item2.jpg"style="height:200px; width:200px" align="center">
+            <label><h2>$500</h2></label>
+            </br>
+            <label>Quantity:<input type="number" name="quantity2"></label>
+          </th>
+          <th>
+                        
+            <label><h2>Number 106: Giant Hand</h2></label>
+            <img src="http://i237.photobucket.com/albums/ff138/brandonlammey/448%20Project/Item3.jpg" style="height:200px; width:200px" align="center">
+            <label><h2>$10000</h2></label>
+            </br>
+            <label>Quantity:<input type="number" name="quantity3"></label>
+          </th>
+        </tr>
+        </table>
+        
+        </br></br>
+        <!--Shipping Options-->
+        <table id="customerFrontEndTable">
+          <h2>Shipping Method:</h2>
+          <input id="radio" type="radio" name="shipping" value="7day"><label id="shipping">7 day (Free) </label></br>
+          <input id="radio" type="radio" name="shipping" value="3day"><label id="shipping">3 day ($5) </label></br>
+          <input id="radio" type="radio" name="shipping" value="overNight"> <label id="shipping">Over Night ($50) </label>
+        </table>
+        </br></br></br></br>
+        <!--Submit and Reset Buttons-->
+        <input type="reset">
+        <input type="submit">
+              
+        </form>
+        
+        <table id="customerFrontEndTable">
+          <tr><td>
+          <br/><br/>
+          <!--Return to Exercises-->
+          <a href="index.html">Home</a>
+          <br/><br/>
+          </td></tr>
+        </table>
+    </body>
+
+</html>

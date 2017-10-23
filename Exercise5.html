@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+    Author: Brandon Lammey
+    Date Last Updated: 28 September 2017
+    File Name: Exercise5.html
+    Description: Outputs a button which calls on multiplicationTable.php to output a times table from 1-100
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--includes: javascript file and CSS file-->
+        <link rel="stylesheet" href="myStyle.css">
+
+        <title> 
+                Multiplication Table
+        </title>
+    </head>
+
+    <body>
+            <table id="customerFrontEndTable">
+                <tr>
+                    <h1> Multiplication Table </h1>
+                </tr>
+
+                <tr>
+                    <td>
+                        <br/>
+                         <?php include 'multiplicationTable.php';?>
+                        <form action="multiplicationTable.php" method="post">
+                        <input type="submit" value= "Open Table"/>
+                        </form>
+            </td>
+        </tr>
+
+                <tr>
+                        <td>
+                            <br/>
+                            
+                            <a href="index.html">HOME</a>
+                        </td>
+                    </tr>
+
+            </table>
+    </body>
+
+</html>

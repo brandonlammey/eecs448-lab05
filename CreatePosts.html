@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+    Author: Brandon Lammey
+    Date Last Updated: 20 October 2017
+    File Name: CreatePosts.html
+    Description: Asks for user input. Calls on CreatePosts.php on submit to add input to Posts.
+-->
+
+<html>
+        <head>
+
+            <link rel="stylesheet" href="myStyle.css">
+            <title>Create Posts</title>
+        </head>
+
+        <body>
+
+<h1>Posts </h1>
+
+<form name="poster" action="CreatePosts.php" method="post">
+
+<label>Username: </label><input type="text" name="username"><br/>
+<label>Post: </label><input type="text" name="textEntry"><br/>
+<br/>
+<input type="submit">
+
+</form>
+
+<table id="customerFrontEndTable">
+  <tr><td>
+  <br/><br/>
+  <!--Return to Exercises-->
+  <a href="index.html">Home</a>
+  <br/><br/>
+  </td></tr>
+</table>
+
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+    Author: Brandon Lammey
+    Date Last Updated: 20 October 2017
+    File Name: ViewUserPosts.html
+    Description: Outputs a drop down list populated using php to select to view a users Posts
+    Not functional on current EECS lab machines, using php in place of file
+-->
+
+<html>
+
+        <head>
+
+            <link rel="stylesheet" href="myStyle.css">
+            <title>User Posts</title>
+        </head>
+
+        <body>
+            <h1> View Posts </h1>
+            <br/><br/>
+            <h2> View a users posts </h2>
+
+            <form name="users" action="ViewUserPosts..php" method="post">
+
+            <label>Select User: </label><select type="text" name="username"><br/>
+
+              <?php
+
+
+              $mysqli = new mysqli("mysql.eecs.ku.edu", "blammey", 'P@$$word123', "blammey");
+
+              if ($mysqli->connect_errno)
+              {
+              printf("Connect failed: %s\n", $mysqli->connect_error);
+              exit();
+              }
+
+              $username = "SELECT user_id FROM Users";
+
+              if ($result = $mysqli->query($username))
+              {
+
+                while($row = $result->fetch_assoc())
+                {
+                  $temp = $row["user_id"];
+                  echo "<option value='button'>" . $temp . "</option>"
+
+                }
+              }
+
+              $mysqli->close();
+              ?>
+            </select>
+            <input type="submit">
+
+            </form>
+        </body>
+
+    </html>
