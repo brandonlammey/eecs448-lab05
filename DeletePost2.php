@@ -25,7 +25,7 @@ echo"<tr><th style='text-align:center'>Post ID</th><th style='text-align:center'
 
 if(empty($_POST['deletePost']))
 {
-    echo"<tr><th colspan='3' style='text-align:center'>No Option Selected</th></tr>";
+    echo"<tr><td colspan='3' style='text-align:center'>No Option Selected</td></tr>";
 }
 else
 {
@@ -40,11 +40,11 @@ else
         $sql = "DELETE FROM Posts WHERE content='$selected'";
         if ($mysqli->query($sql) === TRUE) 
         {
-            echo"<tr><th style='text-align:center'>" . $row['post_id'] . "</th><th style='text-align:center'>" . $row['author_id'] . "</th><th>$selected</th></tr>";            
+            echo"<tr><td style='text-align:center'>" . $row['post_id'] . "</td><td style='text-align:center'>" . $row['author_id'] . "</td><td>$selected</td></tr>";            
         } 
         else 
         {
-            echo"<tr><th style='text-align:center'>" . $row['post_id'] . "<th colspan='2' style='text-align:center'> ERROR DELETING POST! </th></tr>";
+            echo"<tr><td style='text-align:center'>" . $row['post_id'] . "</td><td colspan='2' style='text-align:center'> ERROR DELETING POST! </td></tr>";
             echo $mysqli->error;
         }        
     }

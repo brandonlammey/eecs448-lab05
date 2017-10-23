@@ -39,21 +39,17 @@ if ($mysqli->connect_errno)
 
 $posts = "SELECT author_id, content FROM Posts";
 
-//echo "Select User: <select type='text' name='username'><br/>";
 
 echo "<form name='users' action='DeletePost2.php' method='post'>";
-
 echo "<table class='tftable' border='1'>";
-//echo"<tr><th colspan='3'><h3> Posts </h3></th></tr>";
+
 echo"<tr><th style='text-align:center'>Delete</th><th style='text-align:center'>User</th><th style='text-align:center'>Post</th></tr>";
 if ($result = $mysqli->query($posts))
 {
-
   while($row = $result->fetch_assoc())
   {
     echo"<tr><td><input type='checkbox' name='deletePost[]' value='" . $row['content'] . "'> </td> <td style='text-align:center'>" . $row["author_id"] . "</td> <td style='text-align:left'>". $row["content"] . "</td>"; 
-    //echo "<option value='" . $row['user_id'] . "'>" . $row["user_id"] . "</option>";
-    //echo "<option value='" . $row['user_id'] . "'>" . $row["user_id"] . "</option>";
+
   }
   echo "</tr>";
 }
